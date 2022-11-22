@@ -26,12 +26,12 @@ console.log(nome +  ' sobrenome ' +  ' tem '  + idade +  ' e seu índice de mass
 
 
 
-let nome = 'Carlos';
-let sobrenome = 'de Souza';
-let idade  =  28;
-let peso   =  80.1;
-let altura = 1.76 ;
-let temPlano = true;
-let imc = peso/(altura**2);
+// let nome = 'Carlos';
+// let sobrenome = 'de Souza';
+// let idade  =  28;
+// let peso   =  80.1;
+// let altura = 1.76 ;
+// let temPlano = true;
+// let imc = peso/(altura**2);
 
-console.log(nome +  sobrenome  +  ' tem '  + idade +  ' e seu índice de massa corporal é de '  + imc  )
+// console.log(nome +  sobrenome  +  ' tem '  + idade +  ' e seu índice de massa corporal é de '  + imc  )
