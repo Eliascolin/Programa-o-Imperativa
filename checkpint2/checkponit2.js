@@ -42,6 +42,4 @@
 
         this,notas = notas}
 
-        calcularMedia
-
     }
