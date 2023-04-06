@@ -13,7 +13,7 @@ Com essa informação em mente, somos solicitados a fazer o seguinte.*/
  //crie uma conta de teste e verifique se as propriedades mencionadas acima são criadas corretamente.
 
 
- let contaTeste = {
+ /*let contaTeste = {
 
    numeroConta: 350-9,
    tipoConta: "corrente",
@@ -27,12 +27,12 @@ Com essa informação em mente, somos solicitados a fazer o seguinte.*/
 cliente nos forneceu uma lista de contas que devemos ser capazes de criar. Para isso, 
 devemos gerar uma função construtora que facilite a criação das contas bancárias correspondentes mais rapidamente.*/
 
-class contas{
-constructor(numero,conta,saldo,titular){
+/*class conta{
+constructor(numero,tipo,saldo,titular){
 
 this.numeroConta = numero,
 
-this.tipoConta = conta,
+this.tipo = tipo,
 
 this.saldo = saldo,
 
@@ -42,20 +42,43 @@ this.titularConta = titular
 
 }
 
-const usuario1 = new contas (1,'Conta Corrente',0,'Fulano')
+
 
 
 
 //Também nos pedem a criação de um objeto literal chamado banco que terá uma propriedade 
 //chamada clientes, ele será composto pela lista de objetos gerados no ponto anterior.
 const banco = {
-
-  const clientes : [],
-    
-
-
-
-} 
-
+ clientes: [],
+adicionarCliente(numero,tipo,saldo,titular){
+const conta = new conta(numero,tipo,saldo,titular)
+this.cliente.push(conta);
+}
+};
 
 
+
+banco.adicionarCliente(35,"poupança",32,"Fulano4");
+
+console.log(banco.clientes)*/
+
+
+function Conta(numero, tipo, saldo, titular) {
+  this.numero = numero;
+  this.tipo = tipo;
+  this.saldo = saldo;
+  this.titular = titular;
+}
+
+const banco = {
+  clientes: [],
+  adicionarCliente(numero, tipo, saldo, titular) {
+    const conta = new Conta(numero, tipo, saldo, titular);
+    this.clientes.push(conta);
+  }
+};
+
+
+banco.adicionarCliente(35, "poupança", 32, "Fulano4");
+
+console.log(banco.clientes);
