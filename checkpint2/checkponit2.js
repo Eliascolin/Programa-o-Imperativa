@@ -15,11 +15,11 @@
 
                  constructor (nome,faltas,notas){
 
-                 this.nome = nome,
+                 this.nome = nome;
 
-                this.faltas = faltas,
+                this.faltas = faltas;
 
-                 this.notas = notas
+                 this.notas = notas;
 
        }
 
@@ -57,56 +57,53 @@ this.alunoNovo.push(estudante)
         
         for(let meidia of this.alunoNovo){
 
-       if(meidia.aluno === mediaNotas){
+       if(meidia.nome === mediaNotas){
        
-        let calculo = this.notas
+           let notas = meidia.notas.length
 
-        let medias = 0;
+           
+            let valor = meidia.notas
+           
+            let numero = 0
 
-         for(var i = 0; i < calculo.length; i++) {
+           for(let i = 0; i < notas; i++){
+
+             let soma = valor[i]
+
+
+           numero += soma
+
+
+           console.log(numero)
+           } 
+      } 
     
-           let resultado = medias += calculo[i]
-
-           return console.log(resultado)
-
      }
 
+   },
 
-    
-     }
-
-
-     }
-
-
- }
-
-
-
- faltas(mediaFatas){
+   faltasAluno(aumentarFaltas){
 
 
     for(let meidia of this.alunoNovo){
+        if(meidia.nome === aumentarFaltas){
 
-
-        if(meidia.aluno === mediaFatas ){
-          
-            
-        
-            const calculo = this.faltas
-            for( var i = mediaFatas; i = mediaFatas; i++)
-
-               console.log (calculo)
+            console.log(meidia.faltas + 1)  
+}
 
         }
     }
 
+    
+   }
 
- }
+   
 
+    
+    
 
-
- }
+ 
+ 
 
 
 
@@ -124,6 +121,68 @@ novoAluno.adicionarAluno("aluno3",5,[7,2,3])
 
 console.table(novoAluno.alunoNovo)
 
-const faltasCalculo = novoAluno.calcularMedia("aluno1")
+const faltasCalculo = novoAluno.calcularMedia("aluno2")
 
 console.log(faltasCalculo)
+
+const FatasMaisUm = novoAluno.faltasAluno("aluno1")
+
+console.log(FatasMaisUm)
+
+
+
+/*crie o objeto literal curso que tem como atributos: nome do curso (string), 
+nota de aprovação (number), faltas máximas (number) e uma lista de 
+estudantes (um array composto pelos alunos criados no passo 2).*/
+
+
+
+class Curso  {
+
+constructor(nombreCurso,Nota,faltasMaximas,listasEstudiantes){
+
+this.curso = nombreCurso;
+
+this.notas = Nota;
+
+this.faltas = faltasMaximas;
+
+
+this.estudiantes = listasEstudiantes;
+
+
+}
+
+}
+
+
+
+const curso = {
+
+listaCursos:[],
+
+ adicionarCurodo(nombreCurso,Nota,faltasMaximas,listasEstudiantes){
+const cursoNuevo =  new Curso ((nombreCurso,Nota,faltasMaximas,listasEstudiantes))
+
+this.listaCursos.push(cursoNuevo)
+
+
+ },
+
+
+ /*Crie o método que permite adicionar alunos à lista do curso, ou seja,
+  quando chamamos nosso método em nosso objeto curso, deverá adicionar um 
+ aluno a mais na propriedade lista de estudantes do objeto curso.*/
+
+ adicionarAlunos(nombreAluno){
+
+  for(let estudante of novoAluno.alunoNovo){
+ 
+if(estudante.nome === nombreAluno){
+
+this.listaCursos.push(novoAluno.alunoNovo)
+console.log(`o aluno ${nombreAluno} foi adicionado ao curso`)
+}
+  }
+ }
+}
