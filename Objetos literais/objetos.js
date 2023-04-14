@@ -27,58 +27,63 @@ Com essa informação em mente, somos solicitados a fazer o seguinte.*/
 cliente nos forneceu uma lista de contas que devemos ser capazes de criar. Para isso, 
 devemos gerar uma função construtora que facilite a criação das contas bancárias correspondentes mais rapidamente.*/
 
-/*class conta{
+class Conta{
 constructor(numero,tipo,saldo,titular){
 
-this.numeroConta = numero,
+this.numero = numero,
 
 this.tipo = tipo,
 
 this.saldo = saldo,
 
-this.titularConta = titular
-
+this.titular = titular
+}
 }
 
-}
-
-
-
-
-
-//Também nos pedem a criação de um objeto literal chamado banco que terá uma propriedade 
-//chamada clientes, ele será composto pela lista de objetos gerados no ponto anterior.
 const banco = {
- clientes: [],
+ clientes:[],
 adicionarCliente(numero,tipo,saldo,titular){
-const conta = new conta(numero,tipo,saldo,titular)
-this.cliente.push(conta);
-}
-};
+const conta = new Conta (numero,tipo,saldo,titular)
+this.clientes.push(conta);
+},
+
+/*o objeto do banco criará um método chamado consultarCliente que receberá um nome (titular)
+ por parâmetro e deve pesquisar na lista 
+de contas e retornar ao objeto do cliente que corresponde a esse nome inserido.*/
 
 
+consultarCliente(titularCliente){
 
-banco.adicionarCliente(35,"poupança",32,"Fulano4");
-
-console.log(banco.clientes)*/
-
-
-function Conta(numero, tipo, saldo, titular) {
-  this.numero = numero;
-  this.tipo = tipo;
-  this.saldo = saldo;
-  this.titular = titular;
-}
-
-const banco = {
-  clientes: [],
-  adicionarCliente(numero, tipo, saldo, titular) {
-    const conta = new Conta(numero, tipo, saldo, titular);
-    this.clientes.push(conta);
+  for(let cliente of this.clientes ){
+  
+  if (cliente.titular === titularCliente){
+  return cliente}
+  
   }
+  return console.log('usuario nao encontrado');
+  }
+  
+  
+
 };
 
+banco.adicionarCliente('01','poupança',0,'Fulano4');
+banco.adicionarCliente('924','corrente',4639879843,'elias');
+console.table(banco.clientes)
 
-banco.adicionarCliente(35, "poupança", 32, "Fulano4");
+const clienteEncontrado = banco.consultarCliente('elias');
 
-console.log(banco.clientes);
+console.log(clienteEncontrado)
+
+
+
+
+
+
+//for(let i = 0; i < banco.clientes.length; i++){
+
+//const  cliente = banco.clientes [i];
+
+ // console.log(cliente)
+//}
+

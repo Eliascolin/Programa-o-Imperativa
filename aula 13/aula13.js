@@ -24,10 +24,10 @@ function pontuacaoMaior(participante){
 }
 */
 
-let ParticipanteA:  [5, 8, 4, 9, 5];
-let ParticipanteB:  [8, 7, 8, 6, 8];
-let ParticipanteC:  [7, 5, 10, 8, 3];
+// let ParticipanteA:  [5, 8, 4, 9, 5];
+// let ParticipanteB:  [8, 7, 8, 6, 8];
+// let ParticipanteC:  [7, 5, 10, 8, 3];
 
-function melhorMédia(media){
+// function melhorMédia(media){
     
-}
+// }
