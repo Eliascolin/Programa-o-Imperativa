@@ -65,10 +65,17 @@ function CriarMatriz(mz){
 
     this.mz=mz
 
-const novo =  new CriarMatriz (mz)
+const novo = []
 
-for(let i = 0; i< novo.[10];i++){
+cons
 
+for(let i = 0; i< novo[10];i++){
+
+    for(let a=0;a<novo[i][10];a++){
+
+
+
+    }
     
 }
 
